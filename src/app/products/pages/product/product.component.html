@@ -1,4 +1,8 @@
 <p>product works!</p>
 
 
-<products-price />
+<products-price *ngIf="isProductVisible" [price]="currentPrince" />
+
+<button (click)="isProductVisible = !isProductVisible"> Toggle</button>
+<br>
+<button (click)="increasePrice()"> Incrementar</button>
